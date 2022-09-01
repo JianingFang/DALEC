@@ -4,6 +4,8 @@ using ClimaCore
 using ClimaLSM
 using ClimaLSM.Domains
 using NetCDF
+using CSV
+using DataFrames
 
 import ClimaLSM: name, make_rhs, prognostic_vars, prognostic_types
 import ClimaLSM.Domains: coordinates
