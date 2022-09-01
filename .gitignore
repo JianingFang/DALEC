@@ -59,5 +59,7 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # End of https://www.toptal.com/developers/gitignore/api/julia,macos
