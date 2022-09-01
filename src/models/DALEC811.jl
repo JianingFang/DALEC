@@ -70,7 +70,18 @@ ClimaLSM.Domains.coordinates(model::DALEC811{FT}) where {FT} = FT.([0.0]);
 ClimaLSM.prognostic_types(::DALEC811{FT}) where {FT} = (FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT,
     FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT);
 
+    ClimaLSM.auxiliary_vars(::DALEC811) = (:LAI, :GPP, :ET, :temperate, :respiration_auto, :leaf_production, :labile_production, 
+    :root_production, :wood_production, :lff, :lrf, :labile_release, :leaf_litter, :wood_litter,
+      :root_litter, :respiration_hetero_litter, :respiration_hetero_som, :litter_to_som, :runoff,
+       :labile_fire_combust, :foliar_fire_combust, :root_fire_combust, :wood_fire_combust,
+        :litter_fire_combust, :som_fire_combust, :labile_fire_transfer, :foliar_fire_transfer,
+         :root_fire_transfer, :wood_fire_transfer, :litter_fire_transfer, :total_fire_combust,
+          :nee, :next_labile_pool, :next_foliar_pool, :next_root_pool, :next_wood_pool, :next_litter_pool,
+           :next_som_pool, :next_water_pool);
 
+ClimaLSM.auxiliary_types(::DALEC811{FT}) where {FT} = (FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT,
+    FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT, FT);
+    
 """
     ClimaLSM.make_rhs(model::DALEC811{FT}) where {FT}
 
